@@ -1,13 +1,11 @@
 import { db } from "./utils/dbConnection.js";
 import { app } from "./utils/engine.js";
 
-app.get("/", (req, res) => {
-  res.json({ message: "we work!" });
-});
-
 app.get("/getMessages", async (req, res) => {
   try {
-    const query = await db.query(`SELECT * FROM week07messages `);
+    const query = await db.query(
+      `SELECT * FROM week07messages ORDER BY id DESC`
+    );
     res.json(query.rows);
   } catch {
     console.log("error at getMessages");

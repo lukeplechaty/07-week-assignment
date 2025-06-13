@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import NewMessageForm from "./NewMessageForm";
 import Message from "./Message";
 
-export default function Messages() {
+export default function Messages(props) {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getMessage() {
@@ -22,7 +22,7 @@ export default function Messages() {
       {data.map((items) => {
         return <Message key={items.id} data={items} />;
       })}
-      <NewMessageForm />
+      <NewMessageForm username={props.username} />
     </div>
   );
 }

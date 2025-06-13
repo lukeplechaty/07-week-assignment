@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-export default function NewMessageForm() {
+export default function NewMessageForm(props) {
   const [data, setData] = useState({
-    name: "",
+    name: props.username ? props.username : "",
     message: "",
   });
   function handleData(event) {
@@ -16,7 +16,7 @@ export default function NewMessageForm() {
       body: JSON.stringify(data),
     });
     setData({
-      name: "",
+      name: props.username ? props.username : "",
       message: "",
     });
   }

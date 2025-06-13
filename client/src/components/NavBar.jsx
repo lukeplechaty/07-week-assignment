@@ -4,10 +4,12 @@ export default function NavBar(props) {
     <nav>
       <Link to={"/"}>Home</Link>
       <Link to={"/messages"}>Messages</Link>
-      {!props.username ? (
+      {!props.user ? (
         <Link to={"/login"}>Login</Link>
       ) : (
-        <Link to={`/profile/:${props.username}`}>{props.username}</Link>
+        <Link to={`/profile/:${props.user.username}`}>
+          {props.user.username}
+        </Link>
       )}
     </nav>
   );

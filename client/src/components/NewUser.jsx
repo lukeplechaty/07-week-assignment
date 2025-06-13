@@ -23,7 +23,7 @@ export default function NewUser() {
       if (jsonData.added) {
         navigate(`/login`);
       } else if (jsonData.error == "used") alert("Username is in use");
-    } else alert("Passwords need to mach");
+    } else alert("Passwords need to match");
   }
   return (
     <>

@@ -3,10 +3,10 @@ import NewMessageForm from "./NewMessageForm";
 import Message from "./Message";
 
 export default function Messages(props) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   useEffect(() => {
     async function getMessage() {
-      const res = await fetch(import.meta.env.VITE_API_URL + "/getMessages");
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/getMessages`);
       const jsonData = await res.json();
       setData(jsonData);
     }
@@ -19,10 +19,12 @@ export default function Messages(props) {
 
   return (
     <div>
-      {data.map((items) => {
-        return <Message key={items.id} data={items} />;
-      })}
-      <NewMessageForm username={props.username} />
+      {data
+        ? data.map((items) => {
+            return <Message key={items.id} data={items} user={props.user} />;
+          })
+        : null}
+      {props.user ? <NewMessageForm user={props.user} /> : null}
     </div>
   );
 }

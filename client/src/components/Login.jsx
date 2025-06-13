@@ -19,7 +19,7 @@ export default function Login(props) {
     });
     const jsonData = await res.json();
     if (jsonData.get) {
-      props.setuser(jsonData.username);
+      props.setuser({ username: jsonData.username, id: jsonData.id });
       navigate(`/profile/${userdata.username}`);
     } else alert("Wrong Username or Password");
   }

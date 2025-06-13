@@ -18,11 +18,12 @@
 - stretch goals
   <img src="image-3.png" alt="phone & desktop"/>
   <img src="image-4.png" alt="DB"/>
-  - Create dynamic pages using react-router-dom.
-  - Use react-router-dom to create a dedicated route for the categories e.g. /posts/:categoryName.
-  - Allow users to delete posts.
-  - Add ‘like’ functionality on posts.
-  - Create additional SQL queries to show filtered posts.
+
+  - Create dynamic pages using react-router --done
+  - Use react-router to create a dedicated route --done
+  - Allow users to delete posts --done
+  - Add ‘like’ functionality on posts --done
+  - Create additional SQL queries to show filtered posts --nope
 
 ## References
 

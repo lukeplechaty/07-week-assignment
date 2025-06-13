@@ -13,11 +13,11 @@ export default function App() {
   const [user, setUser] = useState(null);
   return (
     <>
-      <NavBar username={user} />
+      <NavBar user={user} />
       <Routes>
         <Route path={"*"} element={<NotFound />} />
         <Route path={"/"} element={<Home />} />
-        <Route path={"/messages"} element={<Messages username={user} />} />
+        <Route path={"/messages"} element={<Messages user={user} />} />
         <Route path={"/login"} element={<Login setuser={setUser} />} />
         <Route path={"/newuser"} element={<NewUser />} />
         <Route

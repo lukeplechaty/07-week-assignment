@@ -2,7 +2,8 @@ import { useState } from "react";
 
 export default function NewMessageForm(props) {
   const [data, setData] = useState({
-    name: props.username ? props.username : "",
+    name: props.user.username,
+    id: props.user.id,
     message: "",
   });
   function handleData(event) {
@@ -16,7 +17,8 @@ export default function NewMessageForm(props) {
       body: JSON.stringify(data),
     });
     setData({
-      name: props.username ? props.username : "",
+      name: props.user.username,
+      id: props.user.id,
       message: "",
     });
   }
@@ -24,14 +26,7 @@ export default function NewMessageForm(props) {
     <form onSubmit={handleSubmit}>
       <fieldset>
         <legend>New Message</legend>
-        <label htmlFor="name">Name: </label>
-        <input
-          type="text"
-          name="name"
-          required
-          value={data.name}
-          onChange={handleData}
-        />
+        <label htmlFor="name">Name: {data.name}</label>
         <label htmlFor="message">Message:</label>
         <input
           type="text"

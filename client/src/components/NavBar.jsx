@@ -1,13 +1,20 @@
 import { Link } from "react-router";
+import "./NavBar.css";
 export default function NavBar(props) {
   return (
     <nav>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/messages"}>Messages</Link>
+      <Link className="link-1 link" to={"/"}>
+        Home
+      </Link>
+      <Link className="link-2 link" to={"/messages"}>
+        Messages
+      </Link>
       {!props.user ? (
-        <Link to={"/login"}>Login</Link>
+        <Link className="link-3 link" to={"/login"}>
+          Login
+        </Link>
       ) : (
-        <Link to={`/profile/:${props.user.username}`}>
+        <Link className="link-3 link" to={`/profile/:${props.user.username}`}>
           {props.user.username}
         </Link>
       )}

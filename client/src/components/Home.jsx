@@ -1,7 +1,8 @@
+import "./Home.css";
 export default function Home() {
   return (
     <>
-      <h1>Welcome to Luke's message system</h1>
+      <h1 className="home">Welcome to Luke's message system</h1>
     </>
   );
 }

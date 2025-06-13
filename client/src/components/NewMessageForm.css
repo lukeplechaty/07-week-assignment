@@ -1,0 +1,13 @@
+.message-form {
+  position: absolute;
+  transform: translate(-50%);
+  top: 0px;
+  left: 50%;
+  /* width: 100%; */
+  display: flex;
+  gap: 10px;
+}
+.message-in-form {
+  display: flex;
+  gap: 10px;
+}

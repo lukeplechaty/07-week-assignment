@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "./Message.css";
+
 export default function Message(props) {
   const [likes, setLikes] = useState(props.data.likes);
   function updateLikes() {
@@ -19,7 +21,7 @@ export default function Message(props) {
     });
   }
   return (
-    <div>
+    <div className="message">
       <h2>{props.data.name}</h2>
       <p>{props.data.message}</p>
       <button onClick={updateLikes}>Likes {likes}</button>

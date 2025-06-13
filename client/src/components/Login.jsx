@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router";
+import "./Login.css";
 
 export default function Login(props) {
   const navigate = useNavigate();
@@ -24,9 +25,9 @@ export default function Login(props) {
     } else alert("Wrong Username or Password");
   }
   return (
-    <>
+    <div className="login-win">
       <form onSubmit={handleSubmit}>
-        <fieldset>
+        <fieldset className="login-form">
           <legend>Login</legend>
           <label htmlFor="username">User Name: </label>
           <input
@@ -45,9 +46,11 @@ export default function Login(props) {
             onChange={handleData}
           />
           <button type="submit">Submit</button>
+          <Link className="login-link" to={"/newuser"}>
+            Make New Acount
+          </Link>
         </fieldset>
       </form>
-      <Link to={"/newuser"}>Make New Acount</Link>
-    </>
+    </div>
   );
 }

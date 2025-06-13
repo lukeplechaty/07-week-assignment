@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router";
+import "./NewUser.css";
 
 export default function NewUser() {
   const navigate = useNavigate();
@@ -26,9 +27,9 @@ export default function NewUser() {
     } else alert("Passwords need to match");
   }
   return (
-    <>
+    <div className="newuser-win">
       <form onSubmit={handleSubmit}>
-        <fieldset>
+        <fieldset className="newuser-form">
           <legend>New Acount</legend>
           <label htmlFor="username">User Name: </label>
           <input
@@ -57,6 +58,6 @@ export default function NewUser() {
           <button type="submit">Submit</button>
         </fieldset>
       </form>
-    </>
+    </div>
   );
 }

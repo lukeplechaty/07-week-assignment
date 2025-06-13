@@ -1,0 +1,17 @@
+.login-win {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+}
+.login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.login-link {
+  color: aqua;
+  text-align: center;
+  &:hover {
+    color: chartreuse;
+  }
+}

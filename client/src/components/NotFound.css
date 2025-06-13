@@ -1,0 +1,32 @@
+.notfound {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+}
+.notfound-h1 {
+  position: inherit;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+  font-size: 500px;
+}
+
+.notfound-h2 {
+  position: inherit;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 50%;
+  font-size: 50px;
+}
+
+@media (width < 800px) {
+  .notfound-h1 {
+    font-size: 200px;
+  }
+  .notfound-h2 {
+    font-size: 30px;
+  }
+}

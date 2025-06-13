@@ -1,0 +1,10 @@
+.newuser-win {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+}
+.newuser-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

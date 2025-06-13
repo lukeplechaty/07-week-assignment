@@ -1,0 +1,26 @@
+.profile {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 50%;
+  width: 200px;
+  height: 130px;
+}
+.profile-h1 {
+  position: inherit;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+  font-size: 60px;
+}
+.profile-btn {
+  position: inherit;
+  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 50%;
+}
+@media (width < 800px) {
+  .profile {
+    font-size: 30px;
+  }
+}

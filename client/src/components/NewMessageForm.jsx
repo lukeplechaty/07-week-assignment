@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./NewMessageForm.css";
 
 export default function NewMessageForm(props) {
   const [data, setData] = useState({
@@ -23,8 +24,8 @@ export default function NewMessageForm(props) {
     });
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <fieldset>
+    <form className="message-form" onSubmit={handleSubmit}>
+      <fieldset className="message-in-form">
         <legend>New Message</legend>
         <label htmlFor="name">Name: {data.name}</label>
         <label htmlFor="message">Message:</label>
